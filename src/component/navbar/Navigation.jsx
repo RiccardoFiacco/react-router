@@ -9,10 +9,10 @@ export function Navigation(){
                             <NavLink to="/">Home</NavLink>
                         </div>
                         <div className="col-4">
-                            <NavLink to="/">Chi siamo</NavLink>
+                            <NavLink to="/chi_siamo">Chi siamo</NavLink>
                         </div>
                         <div className="col-4">
-                            <NavLink to="/">Post</NavLink>
+                            <NavLink to="/posts">Post</NavLink>
                         </div>
                     </div>       
             </div>
