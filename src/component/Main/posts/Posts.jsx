@@ -2,6 +2,8 @@ import axios from "axios";
 import style from "./Posts.module.css";
 import { PostCard } from "../card/PostCard";
 import { useEffect, useState } from "react";
+import { Nabbar } from "../../componentses/nabbar";
+import { Outlet } from "react-router-dom";
 
 const basePost = {
   title: "",
@@ -113,6 +115,8 @@ export function Posts() {
   return (
     <div className={[style.bgcolor_lightGrey, style.flex_grow_1].join(" ")}>
       <div className="container">
+        <Nabbar/>
+        <Outlet/>
         <form
           className="row column-gap-3 row-gap-3 pt-5"
           onSubmit={onSubmit}
