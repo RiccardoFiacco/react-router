@@ -1,5 +1,6 @@
-import { BrowserRouter, Route, Router, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
+import {DefaultPage} from './component/DefaultPage'
 
 function App() {
 
@@ -7,10 +8,11 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route Component={DefaultPageLayout}>
-          <Route path='/' Component={DefaultPageLayout}></Route>
-          <Route path='/' Component={DefaultPageLayout}></Route>
-          <Route path='/' Component={DefaultPageLayout}></Route>
+        <Route Component={DefaultPage}>
+          <Route path='/'></Route>
+          {/* 
+          <Route path='/' Component={}></Route>
+          <Route path='/' Component={}></Route> */}
         </Route>
       </Routes>
     </BrowserRouter>
