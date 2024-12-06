@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
 import {DefaultPage} from './component/DefaultPage'
-
+import { Home } from './component/Main/home/Home'
 function App() {
 
 
@@ -9,7 +9,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route Component={DefaultPage}>
-          <Route path='/'></Route>
+          <Route path='/' Component={Home}></Route>
           {/* 
           <Route path='/' Component={}></Route>
           <Route path='/' Component={}></Route> */}
