@@ -2,7 +2,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import style from "./Footer.module.css"
 export function Footer(){
     return( 
-        <div className={style.bg_color_dark}>
+        <div className={`${style.bg_color_dark} ${style.margint_auto}`}>
         <Container className={[style.bg_color_dark, style.margint_auto]}>  
         <Row>
             <Col className={style.color_white}>
