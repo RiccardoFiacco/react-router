@@ -8,8 +8,10 @@ import style from "./DefaultPage.module.css";
 export function DefaultPage(){
     return(
         <div className={`d-flex flex-column ${style.vh100}`}>
-            <Header/>
-            <Navigation/>
+            <div className="full-navigation">
+                <Header/>
+                <Navigation/>
+            </div>
             <main>
                 <Outlet/>
             </main>
