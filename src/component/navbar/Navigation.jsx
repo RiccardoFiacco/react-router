@@ -1,14 +1,20 @@
+import { NavLink } from "react-router-dom";
+
 export function Navigation(){
     return(
-        <nav className="navbar navbar-expand-lg bg-body-tertiary">
+        <nav className="bg-body-tertiary pt-3 pb-3">
             <div className="container-fluid">
-                <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div className="navbar-nav">
-                    <a className="nav-link active" aria-current="page" href="#">Home</a>
-                    <a className="nav-link" href="#">Features</a>
-                    <a className="nav-link" href="#">Pricing</a>
-                </div>
-                </div>
+                    <div className="row">
+                        <div className="col-4">
+                            <NavLink to="/">Home</NavLink>
+                        </div>
+                        <div className="col-4">
+                            <NavLink to="/">Chi siamo</NavLink>
+                        </div>
+                        <div className="col-4">
+                            <NavLink to="/">Post</NavLink>
+                        </div>
+                    </div>       
             </div>
         </nav>
     )
