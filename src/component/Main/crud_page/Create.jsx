@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 const basePost = {
     title: "",
     slug: "",
@@ -13,7 +14,7 @@ export function Create(){
     const [posts, setPosts] = useState([]);
     const [status, setStatus] = useState(false);
     const uri = "http://localhost:3000/posts/";
-
+    const navigator = useNavigate();
 
         function changeHandler(event) {
             //creo una variabile per il valore da mettere nell'oggetto, se l'elemento che ha scatenato l'evento è  di tipo checkbox
