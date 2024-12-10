@@ -145,7 +145,7 @@ export function Create(){
                     </div>   
                     </form>
                 </div>
-                <div className="col-4">
+                <div className="col-4 fs-2">
                     Inserisci un nuovo post
                 </div>
             </div>
