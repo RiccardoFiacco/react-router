@@ -34,7 +34,7 @@ export function Show(){
                     <p>{post.content}</p>
                 </div>
             </div>
-            <div className="row">
+            <div className="row pb-5">
                 <div className="col text-star mt-5">
                     <DeleteButton id={id} callback={() => navigator("/posts")}/>
                 </div>

@@ -68,6 +68,7 @@ export function Posts() {
                   content={el.content}
                   tags={el.tags}
                   callback={() => deletePost(el.id)}
+                  callbackPosts={() => setPosts(posts.filter((post) => post.id !== el.id))}
                 />
               );
             })
