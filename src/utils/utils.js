@@ -7,6 +7,6 @@ export function axiosPostsCall(uri, callback) {
         callback(res.data)
       })
       .catch((err) => {
-        console.error(err);
+        callback(err);
       });
   }
