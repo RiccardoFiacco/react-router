@@ -3,9 +3,10 @@ import './App.css'
 import {DefaultPage} from './component/DefaultPage'
 import { Home } from './component/Main/home/Home'
 import { ChiSiamo } from './component/Main/chisiamo/ChiSiamo'
-import { Posts } from './component/Main/posts/Posts'
-import { notFound } from './component/not found/notFound'
+import { Posts } from './component/Main/crud_page/index/Posts.jsx'
+import { notFound } from './component/Main/not found/notFound.jsx'
 import { Show } from './component/Main/crud_page/Show.jsx'
+import { Create } from './component/Main/crud_page/create.jsx'
 function App() {
 
 
@@ -18,7 +19,7 @@ function App() {
           <Route path='/posts'>
             <Route index Component={Posts}></Route>
             <Route path='/posts/:id' Component={Show}></Route>
-            {/*<Route path='try3' Component={Try3}></Route> */}
+            <Route path='/posts/create' Component={Create}></Route>
           </Route>
           <Route path='*' Component={notFound}></Route>
         </Route>
