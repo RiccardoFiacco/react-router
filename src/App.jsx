@@ -7,7 +7,7 @@ import { Posts } from './component/Main/posts/Posts'
 import { Try1 } from './component/componentses/try1'
 import { Try2 } from './component/componentses/try2'
 import { Try3 } from './component/componentses/try3'
-
+import { notFound } from './component/not found/notFound'
 function App() {
 
 
@@ -23,6 +23,7 @@ function App() {
             <Route path='try2' Component={Try2}></Route>
             <Route path='try3' Component={Try3}></Route>
           </Route>
+          <Route path='*' Component={notFound}></Route>
 
         </Route>
       </Routes>
