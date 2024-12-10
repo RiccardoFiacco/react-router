@@ -149,7 +149,11 @@ export function Create(){
                     Inserisci un nuovo post
                 </div>
             </div>
-            
+            <div className="row">
+                <div className="col text-end mt-5">
+                    <button type="button" className="btn btn-danger" onClick={() => navigator("/posts")}>torna indietro</button>
+                </div>
+            </div> 
                 
         </div>
     )
