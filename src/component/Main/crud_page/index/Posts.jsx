@@ -31,9 +31,8 @@ export function Posts() {
     axios
       .get(uri)
       .then((res) => {
-        console.log(res.data);
+        
         setPosts(res.data);
-        console.log(posts);
       })
       .catch((err) => {
         console.error(err);
