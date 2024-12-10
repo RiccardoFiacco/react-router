@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { axiosPostsCall } from "../../../utils/utils";
 import { useParams, useNavigate } from "react-router";
 import { Link } from "react-router";
+import { DeleteButton } from "../../delete_button/DeleteButton";
 
 export function Show(){
     let {id} = useParams();
@@ -32,10 +33,13 @@ export function Show(){
                 <div className="col pt-5">
                     <p>{post.content}</p>
                 </div>
-            </div> 
+            </div>
             <div className="row">
+                <div className="col text-star mt-5">
+                    <DeleteButton id={id} callback={() => navigator("/posts")}/>
+                </div>
                 <div className="col text-end mt-5">
-                    <button type="button" className="btn btn-danger" onClick={() => navigator("/posts")}>torna indietro</button>
+                    <button type="button" className="btn btn-success" onClick={() => navigator("/posts")}>torna indietro</button>
                 </div>
             </div>    
         </div> 
