@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 export function PostCard(props) {
   const {id="",slug = "" , title = "", image = "", content = "", tags = [], callback} = props;
@@ -19,6 +20,7 @@ export function PostCard(props) {
           <div className="row">
             <div className="col">
               <a href="#" className="btn btn-primary" onClick={callback}>remove</a>
+              <Link to={`/posts/${id}`} className="btn btn-primary ms-5"> dettagli</Link>
             </div>
           </div>
         </div>
