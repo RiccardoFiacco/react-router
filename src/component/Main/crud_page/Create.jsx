@@ -71,55 +71,86 @@ export function Create(){
       }, [status]);
 
     return(
-        <form
-          className="row column-gap-3 row-gap-3 pt-5"
-          onSubmit={onSubmit}
-          action=""
-        >
-          {/* vado a mettere nei campi di input la funzione da invocare al cambio dell'input e come valore il valore della variabile reattiva*/}
-          <input
-            onChange={(e) => changeHandler(e)}
-            type="text"
-            className="col-2"
-            name="title"
-            value={formData.title}
-            placeholder="inserisci titolo"
-            required
-          ></input>
-          <input
-            onChange={(e) => changeHandler(e)}
-            type="text"
-            className="col-2"
-            name="content"
-            value={formData.content}
-            placeholder="inserisci contenuto"
-            required
-          ></input>
-          <input
-            onChange={(e) => changeHandler(e)}
-            type="text"
-            className="col-2"
-            name="image"
-            value={formData.image}
-            placeholder="inserisci url imagine"
-            required
-          ></input>
-          <input
-            onChange={(e) => changeHandler(e)}
-            type="text"
-            className="col-2"
-            name="tags"
-            value={formData.tags}
-            placeholder="inserisci tags"
-            required
-          ></input>
-          <input
-            type="submit"
-            className="col-1"
-            onClick={() => {
-              setStatus(true);
-            }}
-          ></input>
-        </form>
+        <div className="container">
+            <div className="row justify-content-center align-items-center">
+                <div className="col">
+                    <form
+                    className="row column-gap-3 row-gap-3 pt-5"
+                    onSubmit={onSubmit}
+                    action=""
+                    >
+                    <div className="row">
+                        <div className="col">
+                        <input
+                            onChange={(e) => changeHandler(e)}
+                            type="text"
+                            className="col-8"
+                            name="title"
+                            value={formData.title}
+                            placeholder="inserisci titolo"
+                            required
+                        ></input>
+                        </div>
+                    </div>
+                    {/* vado a mettere nei campi di input la funzione da invocare al cambio dell'input e come valore il valore della variabile reattiva*/}
+                    <div className="row">
+                        <div className="col">
+                            <input
+                                onChange={(e) => changeHandler(e)}
+                                type="text"
+                                className="col-8"
+                                name="content"
+                                value={formData.content}
+                                placeholder="inserisci contenuto"
+                                required
+                            ></input>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col">
+                            <input
+                                onChange={(e) => changeHandler(e)}
+                                type="text"
+                                className="col-8"
+                                name="image"
+                                value={formData.image}
+                                placeholder="inserisci url imagine"
+                                required
+                            ></input> 
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col">
+                            <input
+                                onChange={(e) => changeHandler(e)}
+                                type="text"
+                                className="col-8"
+                                name="tags"
+                                value={formData.tags}
+                                placeholder="inserisci tags"
+                                required
+                            ></input>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col">
+                            <input
+                                type="submit"
+                                className="col-1"
+                                onClick={() => {
+                                setStatus(true);
+                                }}
+                            ></input>
+                        </div>
+                    </div>   
+                    </form>
+                </div>
+                <div className="col-4">
+                    Inserisci un nuovo post
+                </div>
+            </div>
+            
+                
+        </div>
     )
 }
