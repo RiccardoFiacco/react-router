@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { DeleteButton } from "../delete_button/DeleteButton";
 export function PostCard(props) {
-  const {id="",slug = "" , title = "", image = "", content = "", tags = [], callback, callbackPosts} = props;
+  const {id="",slug = "" , title = "", image = "", content = "", tags = [], callback} = props;
 
   return (
     <div className="col-6 pb-5">
@@ -19,7 +19,7 @@ export function PostCard(props) {
           <p className="card-text">{content}</p>
           <div className="row">
             <div className="col">
-              <DeleteButton id={id} callback={callbackPosts}/>
+              <DeleteButton id={id} callback={callback}/>
               <Link to={`/posts/${id}`} className="btn btn-primary ms-5"> dettagli</Link>
             </div>
           </div>

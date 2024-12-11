@@ -67,8 +67,7 @@ export function Posts() {
                   image={el.image}
                   content={el.content}
                   tags={el.tags}
-                  callback={() => deletePost(el.id)}
-                  callbackPosts={() => setPosts(posts.filter((post) => post.id !== el.id))}
+                  callback={() => setPosts(posts.filter((post) => post.id !== el.id))}  // passo una funziona che aggiorna le pizze che sono disponibili
                 />
               );
             })
